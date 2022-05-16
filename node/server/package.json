@@ -13,6 +13,7 @@
     "nodemon": "^2.0.16"
   },
   "scripts": {
-    "start": "cross-env NODE_ENV=development nodemon src/index.js"
+    "start": "cross-env NODE_ENV=development nodemon -r dotenv/config src/index.js",
+    "deploy": "cross-env NODE_ENV=production node -r dotenv/config src/index.js "
   }
 }
